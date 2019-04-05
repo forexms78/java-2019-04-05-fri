@@ -1,23 +1,31 @@
-# Compiled class file
-*.class
 
-# Log file
-*.log
+public class Calc {
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+	private int num1 = 10; //인스턴스 변수 (객체마다 데이터 보관)
+	static int num2 = 20;  //클래스 변수 (클래스에서 선언, 클래스끼리 공유하는 변수)
+	//int result;
+	
+	public void add(int num1, int num2) {	//매개 변수 (메소드 실행시 매번 다르게 들어오는 데이터 저장)
+		int result;       //지역  변수 (해당 메소드에서만 사용, 메소드를 벗어나면 사용X)
+		result = num1 + num2;
+		System.out.println(num1 + " + " + num2 + " = " + result);
+}
+	public int sub(int num1, int num2) {
+		int result;       //지역  변수 (해당 메소드에서만 사용, 메소드를 벗어나면 사용X)
+		result = num1 - num2;
+		System.out.println(num1 + " - " + num2 + " = " + result);
+		return result;
+	}
+	public int mul(int num1, int num2) {
+		int result;       //지역  변수 (해당 메소드에서만 사용, 메소드를 벗어나면 사용X)
+		result = num1 * num2;
+		System.out.println(num1 + " X " + num2 + " = " + result);
+		return result;
+}
+	public int div(int num1, int num2) {
+		int result;       //지역  변수 (해당 메소드에서만 사용, 메소드를 벗어나면 사용X)
+		result = num1 / num2;
+		System.out.println(num1 + " / " + num2 + " = " + result);
+		return result;
+}
+}
