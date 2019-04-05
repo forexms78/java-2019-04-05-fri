@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class ClacMain {
+	
+	static Scanner scan = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		Calc clac = new Calc();		
+		clac.add(100, 200);
+		int mainResult = clac.sub(1000, 2000);
+		System.out.println(" 1000 + 2000 = " + mainResult);
+		System.out.println("두개의 정수를 입력");
+		int num1 = scan.nextInt();
+		int num2 = scan.nextInt();
+		mainResult = clac.mul(num1, num2);
+		System.out.println(num1 + " X " + num2 + " = " + mainResult);
+		mainResult = clac.div(num1, num2);
+		System.out.println(num1 + " / " + num2 + " = " + (double)mainResult);
+	}
+}
